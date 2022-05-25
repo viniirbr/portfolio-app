@@ -16,12 +16,15 @@ export default function Intro() {
 
     return (
         <div className="bg-intro-bg h-[200px]">
-            {name !== '' &&
+            {name !== ''
+                ?
                 <div>
                     <h4 className="font-sans font-bold">Olá! Eu sou</h4>
                     <h1>{name}</h1>
                     <h4>Desenvolvedor Front End</h4>
                 </div>
+                :
+                <h1>Usuário não encontrado</h1>
             }
         </div>
     )

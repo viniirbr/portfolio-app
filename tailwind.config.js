@@ -10,6 +10,7 @@ module.exports = {
       'intro-bg':'#EBEF14',
       'text-header':'#242928',
       'text-paragraph':'#FFFFFF',
+      'orange':'#D36135'
     },
     extend: {},
   },

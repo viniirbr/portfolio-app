@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
+import rectangle from './../assets/img/rectangle.svg'
 
 export default function Intro() {
 
@@ -17,7 +18,7 @@ export default function Intro() {
     }, [])
 
     return (
-        <div className="bg-intro-bg h-[200px]">
+        <div className="bg-intro-bg h-[200px] bg-contain bg-left bg-no-repeat p-2.5" style={{backgroundImage:`url(${rectangle})`}}>
             {name !== ''
                 ?
                 <div>

@@ -10,7 +10,7 @@ export function Header() {
                 <ul className='flex justify-around gap-3'>
                     {navItems.map((item, id) => <HeaderNavItem key={id}>{item}</HeaderNavItem>)}
                 </ul>
-                <button>Github</button>
+                <button className='text-orange'>Github</button>
             </nav>
                 <hr className='mx-10 text-orange border-solid'/>
         </header>

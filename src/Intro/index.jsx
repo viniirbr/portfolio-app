@@ -4,12 +4,14 @@ import { useEffect, useState } from "react"
 export default function Intro() {
 
     const [name, setName] = useState('');
+    const [bio, setBio] = useState('');
 
     useEffect(() => {
         const endpoint = window.location.pathname.substring(1, window.location.pathname.length);
         axios.get(`https://api.github.com/users/${endpoint}`).then(({ data }) => {
-            const { name } = data;
+            const { name, bio } = data;
             setName(name);
+            setBio(bio)
             document.title = name;
         })
     }, [])
@@ -21,7 +23,7 @@ export default function Intro() {
                 <div>
                     <h4 className="font-sans font-bold">Olá! Eu sou</h4>
                     <h1>{name}</h1>
-                    <h4>Desenvolvedor Front End</h4>
+                    <h4>{bio}</h4>
                 </div>
                 :
                 <h1>Usuário não encontrado</h1>
